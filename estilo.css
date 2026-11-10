@@ -1,0 +1,184 @@
+/* Bibi Color — paleta pastel y alegre inspirada en el logotipo */
+:root {
+    --rosa: #F05AA5;
+    --rosa-claro: #F2A6D6;
+    --coral: #F5AEBB;
+    --durazno: #F9A574;
+    --amarillo: #FFC342;
+    --turquesa: #8FD6D7;
+    --menta: #8DD0BD;
+    --lila: #D9B8F0;
+    --texto: #51404D;
+    --blanco: #FFFFFF;
+    --fondo: #FFFAFD;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    color: var(--texto);
+    background: var(--fondo);
+}
+img { max-width: 100%; display: block; }
+h1, h2, h3 { line-height: 1.25; }
+h1 { color: var(--rosa); font-size: clamp(2rem, 4vw, 2.6rem); margin: 8px 0 12px; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); color: var(--turquesa); margin: 0 0 16px; }
+h3 { font-size: 1rem; color: #D94D91; margin: 16px 0 8px; }
+p { line-height: 1.75; }
+figure { margin: 0; }
+.sobretitulo {
+    color: #E65B9E;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    margin: 0;
+}
+#encabezado {
+    background: var(--blanco);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 8px max(5%, calc((100% - 1180px) / 2));
+    box-shadow: 0 3px 18px #e8b5d633;
+    position: relative;
+    z-index: 2;
+}
+#logotipo { width: 105px; flex: 0 0 105px; }
+#logotipo img { width: 100%; height: 90px; object-fit: contain; }
+#menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(16px, 3vw, 38px);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#menu a {
+    color: var(--texto);
+    text-decoration: none;
+    font-size: .95rem;
+    font-weight: 600;
+    transition: color .2s ease;
+}
+#menu a:hover, #menu a:focus { color: var(--rosa); text-decoration: underline; text-underline-offset: 5px; }
+#portada { padding: 22px 20px 12px; background: linear-gradient(180deg, #FFF 0%, #FFF3FA 100%); }
+#imgportada { max-width: 1200px; margin: 0 auto; }
+#imgportada img {
+    width: 100%;
+    max-height: 570px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 22px;
+    box-shadow: 0 10px 35px #db77ae26;
+}
+#acercademi {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 76px 24px 70px;
+    background: var(--blanco);
+}
+#textoacercademi { text-align: center; width: 100%; margin-bottom: 30px; }
+#textoacercademi > p:last-child { margin: 0 auto; max-width: 650px; }
+#perfil {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    width: min(1050px, 100%);
+}
+#fotoperfil { flex: 0 0 300px; }
+#imgperfil {
+    min-height: 280px;
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #FCE0F0, #FFF1D6, #DDF7F4);
+    border-radius: 45% 45% 28px 28px;
+}
+#imgperfil img { width: 100%; max-width: 250px; object-fit: contain; }
+#presentacion { flex: 1; }
+#presentacion h2:first-child { color: var(--rosa); }
+#presentacion p { margin: 0 0 14px; }
+#presentacion h2 { margin-top: 24px; font-size: 1.4rem; }
+#Habilidadesyconocimientos { display: flex; flex-wrap: wrap; gap: 8px; }
+.habilidades { flex: 1 1 150px; }
+.habilidades ul { list-style: none; padding: 0; margin: 0; }
+.habilidades li { padding: 6px 0 6px 22px; position: relative; font-size: .9rem; }
+.habilidades li::before { content: "✿"; position: absolute; left: 0; color: var(--rosa); }
+#descarga { width: 100%; text-align: center; margin-top: 30px; }
+#descarga a {
+    display: inline-block;
+    background: var(--rosa);
+    color: white;
+    text-decoration: none;
+    padding: 9px 19px;
+    border-radius: 999px;
+    font-weight: 600;
+}
+#descarga a:hover { background: #D9448E; }
+#descarga .nota { font-size: .85rem; color: #786977; }
+#portafolio { background: #FFF0F8; text-align: center; padding: 70px 5% 78px; }
+#portafolio h2 { color: #E85B9D; margin: 8px 0; }
+.intro-portafolio { max-width: 720px; margin: 0 auto 34px; }
+#trabajos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+.trabajo {
+    overflow: hidden;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 7px 25px #d967a31a;
+    padding-bottom: 18px;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.trabajo:hover { transform: translateY(-5px); box-shadow: 0 12px 30px #d967a333; }
+.trabajo figure { overflow: hidden; background: #f8e5ef; }
+.trabajo img { width: 100%; height: 330px; object-fit: cover; transition: transform .35s ease; }
+.trabajo:hover img { transform: scale(1.035); }
+.trabajo h3, .trabajo p { margin-left: 20px; margin-right: 20px; }
+.trabajo p { font-size: .9rem; margin-top: 0; margin-bottom: 0; }
+#contacto {
+    background: #51404D;
+    color: white;
+    text-align: center;
+    padding: 45px 20px 25px;
+}
+#contacto h2 { color: #F8A7D4; font-size: 2rem; margin-bottom: 8px; }
+#contacto > p { margin: 8px 0; }
+.datos-contacto { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px 34px; margin: 22px 0; }
+.datos-contacto p { margin: 0; }
+.datos-contacto i { color: #F8A7D4; margin-right: 7px; }
+.datos-contacto a { color: white; text-decoration: none; }
+.datos-contacto a:hover { text-decoration: underline; }
+#contacto .copyright { font-size: .82rem; color: #F6DCEB; margin-top: 30px; }
+@media (max-width: 800px) {
+    #encabezado { flex-direction: column; gap: 6px; padding: 10px 18px 18px; }
+    #logotipo { width: 90px; flex-basis: auto; }
+    #logotipo img { height: 72px; }
+    #menu ul { justify-content: center; flex-wrap: wrap; gap: 12px 22px; }
+    #menu a { font-size: .88rem; }
+    #perfil { flex-direction: column; gap: 25px; }
+    #fotoperfil { flex-basis: auto; width: min(300px, 100%); }
+    #presentacion { text-align: center; }
+    #Habilidadesyconocimientos { text-align: left; }
+    #trabajos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .trabajo img { height: 280px; }
+}
+@media (max-width: 520px) {
+    #portada { padding: 12px 12px 4px; }
+    #imgportada img { border-radius: 13px; min-height: 220px; object-fit: cover; }
+    #acercademi, #portafolio { padding: 48px 17px; }
+    #trabajos { grid-template-columns: 1fr; gap: 20px; }
+    .trabajo img { height: auto; max-height: 430px; object-fit: cover; }
+    .datos-contacto { flex-direction: column; gap: 4px; }
+}
